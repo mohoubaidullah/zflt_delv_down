@@ -1,0 +1,112 @@
+<mvc:View controllerName="fleet.zflt_delv_down.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified">
+	<Shell id="shell">
+		<NavContainer id="wizardNavContainer">
+			<pages>
+				<Page id="wizardContentPage" showHeader="false" title="Vechile Information and Documents">
+					<content>
+						<Wizard id="CreateDocumentWizard" complete="wizardCompletedHandler" finishButtonText="Submit Document">
+							<WizardStep id="idDelvTruckDet" title="Vechile Information and Documents" validated="false" activate="additionalInfoValidation">
+								<MessageStrip class="sapUiSmallMarginBottom" text="{localModel>/generalMsg}" showIcon="true"/>
+								<VBox class="sapUiSmallMargin">
+									<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" title="Vechile Information and Documents"
+										labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4"
+										emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+										<f:content>
+											<Label text="Vehicle ID"/>
+											<Input id="idVehicleId" type="Text" placeholder="Enter Vehicle ID" showSuggestion="true" showValueHelp="true"
+												valueHelpRequest=".onValueHelpRequestCust" submit="onEnterVechile" enabled="{localModel>/idVehicleId}">
+												<suggestionItems>
+													<core:Item text="{VehicleId}"/>
+												</suggestionItems>
+											</Input>
+											<!--<Link xmlns="sap.m" text="Business Patner Details" target="_blank" id="link0" href="{localModel>/bpURL}" emphasized="true"/>-->
+											<Label text="VehicleNo"/>
+											<Text id="idVehicleNo" text="{/VehicleNo}"/>
+											<Label text="Vehicle Text"/>
+											<Text id="idVehicleText" text="{/VehicleText}"/>
+											<!--<Label text="VehicleNo"/>-->
+											<!--<Text id="idVehicleNo" text="{/VehicleNo}"/>-->
+											<Label text="Vechile Location ID"/>
+											<Text id="idVehicleLocId" text="{/VehicleLocId}"/>
+											<Label text="Vechile Location"/>
+											<Text id="idVehicleLoc" text="{/VehicleLoc}"/>
+											<Label text="Vechile Plant"/>
+											<Text id="idVehiclePlant" text="{/VehiclePlant}"/>
+											<Label text="Vechile Vendor"/>
+											<Text id="idVehicleVendor" text="{/VehicleVendor}"/>
+											<Label text="Vechile CC"/>
+											<Text id="idVehicleCc" text="{/VehicleCc}"/>
+											<Button id="onSave" text="Continue" press="onSave" enabled="{localModel>/onSave}"/>
+										</f:content>
+									</f:SimpleForm>
+								</VBox>
+							</WizardStep>
+							<WizardStep id="idImages" title="Vechile Images" validated="true">
+								<MessageStrip class="sapUiSmallMarginBottom" text="{localModel>/docImageMsg}" showIcon="true"/>
+								<f:SimpleForm editable="true">
+									<!--<Label text="Front Image of Vechile"/>-->
+									<!--<Button id="idFront" type="Accept" press="openFrontBtn" text="Front Image"/>-->
+									<!--<Label text="Left Image of Vechile"/>-->
+									<!--<Button id="idLeft" type="Accept" press="openLeftBtn" text="Left Image"/>-->
+									<!--<Label text="Right Image of Vechile"/>-->
+									<!--<Button id="idRight" type="Accept" press="openRightBtn" text="Right Image"/>-->
+									<!--<Label text="Back Image of Vechile"/>-->
+									<!--<Button id="idBack" type="Accept" press="openBackBtn" text="Back Image"/>-->
+									<Label text="Front Images"/>
+									<HBox >
+										<l:HorizontalLayout id="idFleetImagesFront"></l:HorizontalLayout>
+									</HBox>
+									<Label text="Back Images"/>
+									<HBox >
+										<l:HorizontalLayout id="idFleetImagesBack"></l:HorizontalLayout>
+									</HBox>
+									<Label text="Right Images"/>
+									<HBox >
+										<l:HorizontalLayout id="idFleetImagesRight"></l:HorizontalLayout>
+									</HBox>
+									<Label text="Left Images"/>
+									<HBox >
+										<l:HorizontalLayout id="idFleetImagesLeft"></l:HorizontalLayout>
+									</HBox>
+									<Label/>
+								</f:SimpleForm>
+							</WizardStep>
+							<WizardStep id="idAttach" title="Documents Required" validated="true">
+								<MessageStrip class="sapUiSmallMarginBottom" text="{localModel>/docRequiredMsg}" showIcon="true"/>
+								<MessageStrip text="Maximum file size 1MB for documents to be uploaded" type="Warning" showIcon="true" showCloseButton="true"
+									class="sapUiMediumMarginBottom"/>
+								<f:SimpleForm editable="true">
+									<Label text="Ishtimarah Certificate"/>
+									<u:FileUploader id="idfileUploaderIshtimarah" width="100%" tooltip="Upload Ishtimarah certificate" style="Emphasized" maximumFileSize="1"
+										fileSizeExceed="handleFile" placeholder="Choose a file for Upload..." visible="{localModel>/idfileUploaderIshtimarah}"/>
+									<Button id="idfileIshtimarah" type="Accept" press="openIshtimarahFile" visible="{localModel>/idfileIshtimarah}"/>
+									<!--<Button id="idfileIshtimarah2" type="Accept" press="openIshtimarahFile" visible="{localModel>/idfileIshtimarah2}"/>-->
+									<Label text="Insurance Copy"/>
+									<u:FileUploader id="idfileUploaderInsurance" width="100%" tooltip="Upload Insurance" style="Emphasized" maximumFileSize="1"
+										fileSizeExceed="handleFile" placeholder="Choose a file for Upload..." visible="{localModel>/idfileUploaderInsurance}"/>
+									<Button id="idfileInsurance" press="openInsuranceFile" visible="{localModel>/idfileInsurance}"/>
+									<Label text="MOT Card"/>
+									<u:FileUploader id="idfileUploaderMOTCard" width="100%" tooltip="Upload MOT Card" style="Emphasized" maximumFileSize="1"
+										fileSizeExceed="handleFile" placeholder="Choose a file for Upload..." visible="{localModel>/idfileUploaderMOTCard}"/>
+									<Button id="idfileMOTCard" width="100%" press="openMOTCard" visible="{localModel>/idfileMOTCard}"/>
+									<Label text="MVPI Document"/>
+									<u:FileUploader id="idfileUploaderMVPIDocument" width="100%" tooltip="Upload MVPI Document" style="Emphasized" maximumFileSize="1"
+										fileSizeExceed="handleFile" placeholder="Choose a file for Upload..." visible="{localModel>/idfileUploaderMVPIDocument}"/>
+									<Button id="idfileMVPIDocument" width="100%" press="openMVPIDocument" visible="{localModel>/idfileMVPIDocument}"/>
+									<Label text="SASO Certificate"/>
+									<u:FileUploader id="idfileUploaderSASOCertificate" width="100%" tooltip="Upload SASO Certificate" style="Emphasized" maximumFileSize="1"
+										fileSizeExceed="handleFile" placeholder="Choose a file for Upload..." visible="{localModel>/idfileUploaderSASOCertificate}"/>
+									<Button id="idfileSASOCertificate" width="100%" press="openSASOCertificateFile" visible="{localModel>/idfileSASOCertificate}"/>
+									<Label text="Actions"/>
+									<Button id="idButtonUpload" text="Upload Files" width="100px" press="handleUploadFiles" activeIcon="sap-icon://upload"
+										visible="{localModel>/idButtonUpload}"/>
+								</f:SimpleForm>
+							</WizardStep>
+						</Wizard>
+					</content>
+				</Page>
+			</pages>
+		</NavContainer>
+	</Shell>
+</mvc:View>
