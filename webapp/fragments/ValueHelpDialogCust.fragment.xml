@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<SelectDialog
+		id="selectDialogCust"
+		title="Vechile Number"
+		items="{/VechileSearchSet}"
+		search=".onValueHelpSearchCust"
+		confirm=".onValueHelpCloseCust"
+		cancel=".onValueHelpCloseCust">
+		<StandardListItem
+			title="{VechileID}" 
+			description="{VechilePlate}" />
+	</SelectDialog>
+</core:FragmentDefinition>

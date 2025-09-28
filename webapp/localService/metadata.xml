@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZGBC_FLEET_PROCESS_DLT_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="VehicleDetails" sap:content-version="1">
+				<Key><PropertyRef Name="Pernr"/></Key><Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleVendor" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleCc" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleId" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleText" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleNo" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Fleet objectNo."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLoc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehiclePlant" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLocId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VehicleDropDown" sap:content-version="1">
+				<Key><PropertyRef Name="RequestId"/></Key><Property Name="Region" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Character Field of Length 12"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ApprovalLbl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="3-Byte field"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CostCenter" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Cost Center"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleId" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Equipment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleName" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VehicleDetails2" sap:content-version="1">
+				<Key><PropertyRef Name="RequestId"/></Key><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Req Id" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleVendor" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleCc" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleId" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleText" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleNo" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Fleet objectNo."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLoc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehiclePlant" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLocId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VehicleDetails3" sap:content-version="1">
+				<Key><PropertyRef Name="VehicleId"/></Key><Property Name="VehicleCc" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleVendor" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleId" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleText" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleNo" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Fleet objectNo."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLoc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehiclePlant" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLocId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Approve" sap:content-version="1">
+				<Key><PropertyRef Name="RequestId"/><PropertyRef Name="ApprovalLvl"/></Key><Property Name="TlVehicleId" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Character Field of Length 12"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ApprovalLvl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="AppLvl" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="EmployeeDetails" sap:content-version="1">
+				<Key><PropertyRef Name="Pernr"/></Key><Property Name="Channel" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EmpSubgroup" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="EE subgroup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CostCenter" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EmpSubgroupDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameEn" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameAr" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PositionId" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Position" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PositionTextEn" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PositionTextAr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NatioEn" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NatioAr" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DepartmentEn" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DepartmentAr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdNoEn" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdNoAr" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cocd" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Company Code" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CocdDesc" Type="Edm.String" Nullable="false" MaxLength="45" sap:unicode="false" sap:label="Char45" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Dl" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="FleetRequestHeader" sap:content-version="1">
+				<Key><PropertyRef Name="RequestId"/></Key><Property Name="Channel" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DLExpDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="DL Exp Date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CostCenter" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="MOTExpDate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="MOT Exp Date"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Character Field of Length 12"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameEn" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameAr" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PositionId" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Position" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PositionTextEn" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PositionTextAr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NatioEn" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NatioAr" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DepartmentEn" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DepartmentAr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdNoEn" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="IdNoAr" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cocd" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Company Code" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CocdDesc" Type="Edm.String" Nullable="false" MaxLength="45" sap:unicode="false" sap:label="Char45" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Dl" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EmpSubgroup" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="EE subgroup"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="EmpSubgroupDesc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="RequestHeaderToItemNav" Relationship="ZGBC_FLEET_PROCESS_DLT_SRV.RequestHeaderToItem"
+					FromRole="FromRole_RequestHeaderToItem" ToRole="ToRole_RequestHeaderToItem"/></EntityType>
+			<EntityType Name="FleetRequestItem" sap:content-version="1">
+				<Key><PropertyRef Name="RequestId"/></Key><Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Personnel No." sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleVendor" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleCc" Type="Edm.String" Nullable="false" MaxLength="100" sap:unicode="false" sap:label="Character 100"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Req Id" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CreatedOn" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Created on"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CreatedOntime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleId" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Field length 18"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleText" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="30 Characters"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleNo" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Fleet objectNo."
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLoc" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehiclePlant" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VehicleLocId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="Workitem" sap:content-version="1">
+				<Key><PropertyRef Name="WorkitemId"/></Key><Property Name="WorkitemId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Work Item ID"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TaskId" Type="Edm.String" Nullable="false" MaxLength="14" sap:unicode="false" sap:label="Text" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ApprovalLvl" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="AppLvl" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="PlantDropDown" sap:content-version="1">
+				<Key><PropertyRef Name="Plant"/></Key><Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Req Id" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="PlantName" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="LocationDropDown" sap:content-version="1">
+				<Key><PropertyRef Name="LocationId"/></Key><Property Name="LocationId" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Plant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LocationName" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="c" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="SubmitFLC" sap:content-version="1">
+				<Key><PropertyRef Name="RequestId"/></Key><Property Name="ExDate" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Character Field Length = 10"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Req Id" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ShipFromPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ShipFromLoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ShipToPlant" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ShipToLoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Location" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameOfShipper" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Char" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Cost" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3" sap:unicode="false" sap:label="Order quantity"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ShipperContact" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Char20"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="FleetDocuments" sap:content-version="1">
+				<Key><PropertyRef Name="Equnr"/><PropertyRef Name="DocType"/><PropertyRef Name="DocSeq"/></Key><Property Name="Equnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Equipment" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DocType" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Fleet Document Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DocSeq" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Doc Sequence" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Content" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="CONTENT" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Filename" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Filetype" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zdate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ztime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zuser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="FleetReqDocuments" sap:content-version="1">
+				<Key><PropertyRef Name="RequestId"/><PropertyRef Name="DocType"/></Key><Property Name="RequestId" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Req Id" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DocType" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Fleet Document Type"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Content" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="CONTENT" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Filename" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Filetype" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="Text" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zdate" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="Date" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ztime" Type="Edm.Time" Nullable="false" Precision="0" sap:unicode="false" sap:label="Time" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zuser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="VechileSearch" sap:content-version="1">
+				<Key><PropertyRef Name="VechileID"/></Key><Property Name="VechileID" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="VechileID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="VechilePlate" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="VechilePlate"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<Association Name="RequestHeaderToItem" sap:content-version="1"><End Type="ZGBC_FLEET_PROCESS_DLT_SRV.FleetRequestHeader" Multiplicity="1" Role="FromRole_RequestHeaderToItem"/><End Type="ZGBC_FLEET_PROCESS_DLT_SRV.FleetRequestItem" Multiplicity="*" Role="ToRole_RequestHeaderToItem"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_RequestHeaderToItem"><PropertyRef Name="RequestId"/></Principal>
+					<Dependent Role="ToRole_RequestHeaderToItem"><PropertyRef Name="RequestId"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZGBC_FLEET_PROCESS_DLT_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="VehicleDetailsSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.VehicleDetails" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="VehicleDropDownSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.VehicleDropDown" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="VehicleDetails2Set" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.VehicleDetails2" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="VehicleDetails3Set" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.VehicleDetails3" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="ApproveSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.Approve" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="EmployeeDetailsSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.EmployeeDetails" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="FleetRequestHeaderSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.FleetRequestHeader" sap:creatable="false"
+				sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="FleetRequestItemSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.FleetRequestItem" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="WorkitemSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.Workitem" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="PlantDropDownSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.PlantDropDown" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="LocationDropDownSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.LocationDropDown" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="SubmitFLCSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.SubmitFLC" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/><EntitySet Name="FleetDocumentsSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.FleetDocuments" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="FleetReqDocumentsSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.FleetReqDocuments" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="VechileSearchSet" EntityType="ZGBC_FLEET_PROCESS_DLT_SRV.VechileSearch" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+				<AssociationSet Name="RequestHeaderToItemSet" Association="ZGBC_FLEET_PROCESS_DLT_SRV.RequestHeaderToItem" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="FleetRequestHeaderSet" Role="FromRole_RequestHeaderToItem"/><End EntitySet="FleetRequestItemSet" Role="ToRole_RequestHeaderToItem"/></AssociationSet>
+			</EntityContainer><atom:link rel="self"
+				href="https://webidecp-ad534eb75.dispatcher.hana.ondemand.com/destinations/GATEWAY_BERAIN/sap/opu/odata/sap/ZGBC_FLEET_PROCESS_DLT_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version"
+				href="https://webidecp-ad534eb75.dispatcher.hana.ondemand.com/destinations/GATEWAY_BERAIN/sap/opu/odata/sap/ZGBC_FLEET_PROCESS_DLT_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
