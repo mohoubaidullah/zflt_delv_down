@@ -29,3 +29,13 @@ server:
       configuration:
         component: fleet.zflt_delv_down
         ui5Theme: sap_fiori_3
+    - name: sap-fe-mockserver
+      beforeMiddleware: csp
+      configuration:
+        mountPath: /
+        services:
+          - urlPath: /sap/opu/odata/sap/ZGBC_FLEET_PROCESS_DLT_SRV
+            metadataPath: ./webapp/localService/metadata.xml
+            mockdataPath: ./webapp/localService/ZGBC_FLEET_PROCESS_DLT_SRV/data
+            generateMockData: true
+        annotations: []
